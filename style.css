@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: rgb(16, 16, 16);
+}
+
+header {
+    position: fixed;
+}
+
+header>a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+header>a:hover {
+    color: rgb(173, 173, 173);
+}
+
+.curtain {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.curtain__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.curtain__wrapper input[type=checkbox] {
+    position: fixed;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curtain__wrapper input[type=checkbox]:checked~div.curtain__panel--left {
+    transform: translateX(0);
+}
+
+.curtain__wrapper input[type=checkbox]:checked~div.curtain__panel--right {
+    transform: translateX(0);
+}
+
+.curtain__panel {
+    display: flex;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: all 1.5s ease-out;
+    z-index: 2;
+}
+
+.curtain__panel--left {
+    justify-content: flex-end;
+    transform: translateX(-100%);
+}
+
+.curtain__panel--right {
+    justify-content: flex-start;
+    transform: translateX(100%);
+}
+
+.curtain__content {
+    align-items: center;
+    background: rgb(16, 16, 16);
+    color: #fff;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 25px;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    margin-top: 100px;
+}
+
+.curtain__content img {
+    width: 20%;
+}
+
+.jobTitle>p {
+    font-size: 48px;
+    line-height: 82px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+.card-container {
+    perspective: 900px;
+    margin: 50px 50px 0 50px;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.cardShow {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 50px 10px rgba(175, 175, 175, 0.3);
+    backface-visibility: hidden;
+}
+
+.frontShow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 50px 10px rgba(175, 175, 175, 0.3);
+    backface-visibility: hidden;
+}
+
+.front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.front>img {
+    width: 100px;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG BG */
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bgMango {
+    background-image: url(img/mangoTravel.png);
+}
+
+/* END END END */
+.cardShowTitle {
+    font-size: 28px;
+    margin-top: 10px;
+}
