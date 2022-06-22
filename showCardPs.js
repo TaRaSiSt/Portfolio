@@ -8,8 +8,7 @@
         {
             link: 'https://tarasist.github.io/tourist-lviv/',
             image: '',
-            title: 'Tourist lviv',
-            process: '<p>In process</p>'
+            title: 'Tourist lviv'
         },
     ];
 
@@ -20,7 +19,6 @@
             <div class="card-container">
                 <a href="${card.link}" target="_blank">
                     <div class="cardShow">
-                        ${card.process}
                         <div class="frontShow bg ${card.image}"></div>
                     </div>
                 </a>

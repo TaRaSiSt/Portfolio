@@ -130,9 +130,18 @@ header>a:hover {
 }
 
 .cardShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 250px;
     height: 250px;
+}
+
+.cardShow>p {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
 }
 
 .front,
